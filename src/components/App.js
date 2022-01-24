@@ -7,16 +7,10 @@ import Landing from './Landing';
 import Game from './Game';
 import Rules from './Rules';
 import Pieces from './Pieces';
-import Footer from './Footer';
-import groguImg from '../images/grogu.png';
 
 const App = () => {
   const [diceValue, setDiceValue] = useState('');
-  const [grogu, setGrogu] = useState(groguImg);
   const [stateVariable, setStateVariable] = useState([]);
-  // const [counterCookies, setCounterCookies] = useState(3);
-  // const [counterEggs, setCounterEggs] = useState(3);
-  // const [counterFrogs, setCounterFrogs] = useState(3);
   const startGame = () => {
     let babyYoda = 0;
     let cookies = 3;
@@ -26,30 +20,28 @@ const App = () => {
     stateVariable.push(cookies);
     stateVariable.push(frogs);
     stateVariable.push(eggs);
-    console.log(stateVariable);
   };
 
   return (
     <div className='body'>
       <Routes>
-        <Route path='/' element={<Landing startGame={startGame} />}></Route>
-        <Route path='/pieces' element={<Pieces />}></Route>
+        <Route path='/' element={<Landing />} />
+        <Route path='/pieces' element={<Pieces />} />
         <Route
           path='/game'
           element={
             <Game
-              grogu={grogu}
-              //setGrogu={setGrogu}
+              startGame={startGame}
               setDiceValue={setDiceValue}
               diceValue={diceValue}
               stateVariable={stateVariable}
               setStateVariable={setStateVariable}
             />
           }
-        ></Route>
-        <Route path='/rules' element={<Rules />}></Route>
+        />
+
+        <Route path='/rules' element={<Rules />} />
       </Routes>
-      <Footer />
     </div>
   );
 };

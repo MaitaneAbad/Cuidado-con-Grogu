@@ -23,10 +23,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       height: 100px;
       width: 100px;
       border: 1px solid black;
       margin: 5px;
+      img {
+        width: 100px;
+      }
     }
     &--cupboard {
       height: 300px;
@@ -35,4 +39,7 @@
       margin: 5px 5px 5px 30px;
     }
   }
+}
+.hidden {
+  display: none;
 }

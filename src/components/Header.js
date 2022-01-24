@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom';
-import '../styles/layout/landing.scss';
-const Landing = (props) => {
+const Header = () => {
   return (
-    <div className='container'>
-      <div className='container__links'>
+    <>
+      {' '}
+      <div className=''>
         <NavLink to='rules'>
           <input type='button' value='Reglas juego' />
         </NavLink>
@@ -14,7 +14,7 @@ const Landing = (props) => {
           <input type='button' value='Comenzar juego' />
         </NavLink>
       </div>
-    </div>
+    </>
   );
 };
-export default Landing;
+export default Header;
