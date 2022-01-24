@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import '../styles/layout/landing.scss';
-const Landing = () => {
+const Landing = (props) => {
   return (
     <div className='container'>
       <div className='container__links'>
@@ -11,7 +11,11 @@ const Landing = () => {
           <input type='button' value='Piezas juego' />
         </NavLink>
         <NavLink to='game'>
-          <input type='button' value='Comenzar juego' />
+          <input
+            type='button'
+            value='Comenzar juego'
+            onClick={props.startGame}
+          />
         </NavLink>
       </div>
     </div>
