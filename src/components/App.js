@@ -7,6 +7,7 @@ import Landing from './Landing';
 import Game from './Game';
 import Rules from './Rules';
 import Pieces from './Pieces';
+import Footer from './Footer';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/game' element={<Game />}></Route>
         <Route path='/rules' element={<Rules />}></Route>
       </Routes>
+      <Footer />
     </div>
   );
 };
