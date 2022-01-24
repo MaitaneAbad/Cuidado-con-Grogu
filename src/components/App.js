@@ -13,6 +13,7 @@ const App = () => {
   const [stateVariable, setStateVariable] = useState([]);
   const startGame = () => {
     setDiceValue('');
+    stateVariable.splice(0, 4);
     let babyYoda = 0;
     let cookies = 3;
     let frogs = 3;
