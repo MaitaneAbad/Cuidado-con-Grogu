@@ -12,6 +12,7 @@ const App = () => {
   const [diceValue, setDiceValue] = useState('');
   const [stateVariable, setStateVariable] = useState([]);
   const startGame = () => {
+    setDiceValue('');
     let babyYoda = 0;
     let cookies = 3;
     let frogs = 3;
@@ -25,13 +26,12 @@ const App = () => {
   return (
     <div className='body'>
       <Routes>
-        <Route path='/' element={<Landing />} />
+        <Route path='/' element={<Landing startGame={startGame} />} />
         <Route path='/pieces' element={<Pieces />} />
         <Route
           path='/game'
           element={
             <Game
-              startGame={startGame}
               setDiceValue={setDiceValue}
               diceValue={diceValue}
               stateVariable={stateVariable}

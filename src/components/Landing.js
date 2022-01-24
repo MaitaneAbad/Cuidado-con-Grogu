@@ -11,7 +11,11 @@ const Landing = (props) => {
           <input type='button' value='Piezas juego' />
         </NavLink>
         <NavLink to='game'>
-          <input type='button' value='Comenzar juego' />
+          <input
+            type='button'
+            value='Comenzar juego'
+            onClick={props.startGame}
+          />
         </NavLink>
       </div>
     </div>

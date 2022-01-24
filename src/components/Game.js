@@ -91,7 +91,6 @@ const Game = (props) => {
 
   return (
     <>
-      {' '}
       <NavLink to='/'>
         <input type='button' value='Menú' />
       </NavLink>
