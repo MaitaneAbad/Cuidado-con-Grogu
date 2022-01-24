@@ -1,0 +1,11 @@
+.body {
+  background-image: url(../../images/LandingMandalorian.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  @media (min-width: 500px) {
+  }
+}
