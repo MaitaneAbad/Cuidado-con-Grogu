@@ -5,6 +5,7 @@ import groguImg from '../images/grogu.png';
 import wayImg from '../images/way.png';
 import cookieImg from '../images/cookie.png';
 import eggImg from '../images/egg.png';
+import frogImg from '../images/frog.png';
 import Footer from './Footer';
 import Win from './Win';
 import Lost from './Lost';
@@ -19,6 +20,25 @@ const Game = (props) => {
   const [positionFour, setPositionFour] = useState('hidden');
   const [positionFive, setPositionFive] = useState('hidden');
   const [positionSix, setPositionSix] = useState('hidden');
+  const [cookieThree, setCookieThree] = useState('');
+  const [cookieTwo, setCookieTwo] = useState('');
+  const [cookieOne, setCookieOne] = useState('');
+  const [frogThree, setFrogThree] = useState('');
+  const [frogTwo, setFrogTwo] = useState('');
+  const [frogOne, setFrogOne] = useState('');
+  const [eggThree, setEggThree] = useState('');
+  const [eggTwo, setEggTwo] = useState('');
+  const [eggOne, setEggOne] = useState('');
+
+  const winnerModal = () => {
+    if (
+      props.stateVariable[1] === 0 &&
+      props.stateVariable[2] === 0 &&
+      props.stateVariable[3] === 0
+    ) {
+      setWin('');
+    }
+  };
 
   const randomValue = () => {
     const math = Math.floor(Math.random() * 4 + 1);
@@ -44,7 +64,7 @@ const Game = (props) => {
       default:
         break;
     }
-    console.log(props.stateVariable);
+    winnerModal();
   };
   function way() {
     console.log(props.stateVariable[0]);
@@ -154,19 +174,19 @@ const Game = (props) => {
           <div className='game__container--cupboard__food'>
             <div className='game__container--cupboard__food--containerImgs'>
               <img
-                className='game__container--cupboard__food--containerImgs__imgTop'
+                className={`game__container--cupboard__food--containerImgs__imgTop ${cookieThree}`}
                 src={cookieImg}
                 alt='Galleta'
                 title='galleta'
               />
               <img
-                className='game__container--cupboard__food--containerImgs__imgBottomLeft'
+                className={`game__container--cupboard__food--containerImgs__imgBottomLeft ${cookieTwo}`}
                 src={cookieImg}
                 alt='Galleta'
                 title='galleta'
               />
               <img
-                className='game__container--cupboard__food--containerImgs__imgBottomRight'
+                className={`game__container--cupboard__food--containerImgs__imgBottomRight ${cookieOne}`}
                 src={cookieImg}
                 alt='Galleta'
                 title='galleta'
@@ -175,27 +195,42 @@ const Game = (props) => {
           </div>
           <div className='game__container--cupboard__food'>
             <div className='game__container--cupboard__food--containerImgs'>
-              {/* <img className='game__container--cupboard__frogs--containerImgs__imgTop' src={frogmg} alt='Huevo' title='Huevo' />
-              <img className='game__container--cupboard__frogs--containerImgs__imgTop' src={frogImg} alt='Huevo' title='Huevo' />
-              <img className='game__container--cupboard__frogs--containerImgs__imgTop' src={frogImg} alt='Huevo' title='Huevo' /> */}
+              <img
+                className={`game__container--cupboard__food--containerImgs__imgTop ${frogThree}`}
+                src={frogImg}
+                alt='Rana'
+                title='Rana'
+              />
+              <img
+                className={`game__container--cupboard__food--containerImgs__imgBottomLeft ${frogTwo}`}
+                src={frogImg}
+                alt='Rana'
+                title='Rana'
+              />
+              <img
+                className={`game__container--cupboard__food--containerImgs__imgBottomRight ${frogOne}`}
+                src={frogImg}
+                alt='Rana'
+                title='Rana'
+              />
             </div>
           </div>
           <div className='game__container--cupboard__food'>
             <div className='game__container--cupboard__food--containerImgs'>
               <img
-                className='game__container--cupboard__food--containerImgs__imgTop'
+                className={`game__container--cupboard__food--containerImgs__imgTop ${eggThree}`}
                 src={eggImg}
                 alt='Huevo'
                 title='Huevo'
               />
               <img
-                className='game__container--cupboard__food--containerImgs__imgBottomLeft'
+                className={`game__container--cupboard__food--containerImgs__imgBottomLeft ${eggTwo} `}
                 src={eggImg}
                 alt='Huevo'
                 title='Huevo'
               />
               <img
-                className='game__container--cupboard__food--containerImgs__imgBottomRight'
+                className={`game__container--cupboard__food--containerImgs__imgBottomRight ${eggOne}`}
                 src={eggImg}
                 alt='Huevo'
                 title='Huevo'
@@ -212,7 +247,6 @@ const Game = (props) => {
       setPositionFive('hidden');
       setPositionSix('');
     } else {
-      setLost('hidden');
       let aux = props.stateVariable[0];
       aux++;
       props.stateVariable[0] = aux;
@@ -250,44 +284,80 @@ const Game = (props) => {
         break;
     }
   };
+  const cookieCollectCupboard = () => {
+    switch (props.stateVariable[1]) {
+      case 2:
+        setCookieThree('hidden');
+        break;
+      case 1:
+        setCookieTwo('hidden');
+        break;
+      case 0:
+        setCookieOne('hidden');
+        break;
+
+      default:
+        break;
+    }
+  };
+  const frogCollectCupboard = () => {
+    switch (props.stateVariable[2]) {
+      case 2:
+        setFrogThree('hidden');
+        break;
+      case 1:
+        setFrogTwo('hidden');
+        break;
+      case 0:
+        setFrogOne('hidden');
+        break;
+
+      default:
+        break;
+    }
+  };
+  const eggCollectCupboard = () => {
+    switch (props.stateVariable[3]) {
+      case 2:
+        setEggThree('hidden');
+        break;
+      case 1:
+        setEggTwo('hidden');
+        break;
+      case 0:
+        setEggOne('hidden');
+        break;
+
+      default:
+        break;
+    }
+  };
   const collectCookie = () => {
-    if (
-      props.stateVariable[1] === 0 &&
-      props.stateVariable[2] === 0 &&
-      props.stateVariable[3] === 0
-    ) {
-      setWin('');
-    } else if (props.stateVariable[1] !== 0) {
+    if (props.stateVariable[1] !== 0) {
       let aux = props.stateVariable[1];
       aux--;
       props.stateVariable[1] = aux;
+      cookieCollectCupboard();
     }
+    console.log(props.stateVariable);
   };
   const collectFrog = () => {
-    if (
-      props.stateVariable[1] === 0 &&
-      props.stateVariable[2] === 0 &&
-      props.stateVariable[3] === 0
-    ) {
-      setWin('');
-    } else if (props.stateVariable[2] !== 0) {
+    if (props.stateVariable[2] !== 0) {
       let aux = props.stateVariable[2];
       aux--;
       props.stateVariable[2] = aux;
+      frogCollectCupboard();
     }
+    console.log(props.stateVariable);
   };
   const collectEgg = () => {
-    if (
-      props.stateVariable[1] === 0 &&
-      props.stateVariable[2] === 0 &&
-      props.stateVariable[3] === 0
-    ) {
-      setWin('');
-    } else if (props.stateVariable[3] !== 0) {
+    if (props.stateVariable[3] !== 0) {
       let aux = props.stateVariable[3];
       aux--;
       props.stateVariable[3] = aux;
+      eggCollectCupboard();
     }
+    console.log(props.stateVariable);
   };
 
   return (
@@ -310,13 +380,11 @@ const Game = (props) => {
             ? ''
             : 'El resultado del dado es: ' + props.diceValue}
         </p>
-
         <>{way()}</>
-
         <Win win={win} />
         <Lost lost={lost} />
+        <Footer />
       </section>
-      <Footer />
     </>
   );
 };
