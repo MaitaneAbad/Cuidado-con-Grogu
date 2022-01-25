@@ -44,7 +44,7 @@ const Game = (props) => {
     const math = Math.floor(Math.random() * 4 + 1);
     props.setDiceValue(0);
     props.setDiceValue(math);
-    switch (1) {
+    switch (math) {
       case 1:
         props.setDiceValue(1);
         groguAdvances();
