@@ -16,6 +16,7 @@ const Game = (props) => {
   const [positionThree, setPositionThree] = useState('hidden');
   const [positionFour, setPositionFour] = useState('hidden');
   const [positionFive, setPositionFive] = useState('hidden');
+  const [positionSix, setPositionSix] = useState('hidden');
 
   const randomValue = () => {
     const math = Math.floor(Math.random() * 4 + 1);
@@ -47,105 +48,120 @@ const Game = (props) => {
     console.log(props.stateVariable[0]);
     return (
       <>
-        <div className='game__container--grogu'>
+        <div className='game__grogu'>
           <img
-            className={`position__0 ${startGrogu}`}
+            className={`position0 ${startGrogu}`}
             src={groguImg}
             alt='Grogu en su cuna'
             title='Grogu en su cuna'
           />
         </div>
-        <div className='game__container--way'>
-          <img
-            className={`game__container--way__position__${props.stateVariable[0]}  ${positionZero}`}
-            src={groguImg}
-            alt='Grogu en su cuna'
-            title='Grogu en su cuna'
-          />
-          <img
-            className='game__container--way__item'
-            src={wayImg}
-            alt='Camino'
-            title='Camino'
-          />
-        </div>
-        <div className='game__container--way'>
-          <img
-            className={`game__container--way__position__${props.stateVariable[0]} ${positionOne}`}
-            src={groguImg}
-            alt='Grogu en su cuna'
-            title='Grogu en su cuna'
-          />
-          <img
-            className='game__container--way__item'
-            src={wayImg}
-            alt='Camino'
-            title='Camino'
-          />
-        </div>
-        <div className='game__container--way'>
-          <img
-            className={`game__container--way__position__${props.stateVariable[0]} ${positionTwo}`}
-            src={groguImg}
-            alt='Grogu en su cuna'
-            title='Grogu en su cuna'
-          />
-          <img
-            className='game__container--way__item'
-            src={wayImg}
-            alt='Camino'
-            title='Camino'
-          />
-        </div>
-        <div className='game__container--way'>
-          <img
-            className={`game__container--way__position__${props.stateVariable[0]} ${positionThree}`}
-            src={groguImg}
-            alt='Grogu en su cuna'
-            title='Grogu en su cuna'
-          />
-          <img
-            className='game__container--way__item'
-            src={wayImg}
-            alt='Camino'
-            title='Camino'
-          />
-        </div>
-        <div className='game__container--way'>
-          <img
-            className={`game__container--way__position__${props.stateVariable[0]} ${positionFour}`}
-            src={groguImg}
-            alt='Grogu en su cuna'
-            title='Grogu en su cuna'
-          />
-          <img
-            className='game__container--way__item'
-            src={wayImg}
-            alt='Camino'
-            title='Camino'
-          />
-        </div>
-        <div className='game__container--way'>
-          <img
-            className={`game__container--way__position__${props.stateVariable[0]} ${positionFive}`}
-            src={groguImg}
-            alt='Grogu en su cuna'
-            title='Grogu en su cuna'
-          />
-          <img
-            className='game__container--way__item'
-            src={wayImg}
-            alt='Camino'
-            title='Camino'
-          />
-        </div>
+        <section className='game__container'>
+          <div className='game__container--way'>
+            <img
+              className={`game__container--way__position${props.stateVariable[0]}  ${positionZero}`}
+              src={groguImg}
+              alt='Grogu en su cuna'
+              title='Grogu en su cuna'
+            />
+            <img
+              className='game__container--way__item'
+              src={wayImg}
+              alt='Camino'
+              title='Camino'
+            />
+          </div>
+          <div className='game__container--way'>
+            <img
+              className={`game__container--way__position${props.stateVariable[0]} ${positionOne}`}
+              src={groguImg}
+              alt='Grogu en su cuna'
+              title='Grogu en su cuna'
+            />
+            <img
+              className='game__container--way__item'
+              src={wayImg}
+              alt='Camino'
+              title='Camino'
+            />
+          </div>
+          <div className='game__container--way'>
+            <img
+              className={`game__container--way__position${props.stateVariable[0]} ${positionTwo}`}
+              src={groguImg}
+              alt='Grogu en su cuna'
+              title='Grogu en su cuna'
+            />
+            <img
+              className='game__container--way__item'
+              src={wayImg}
+              alt='Camino'
+              title='Camino'
+            />
+          </div>
+          <div className='game__container--way'>
+            <img
+              className={`game__container--way__position${props.stateVariable[0]} ${positionThree}`}
+              src={groguImg}
+              alt='Grogu en su cuna'
+              title='Grogu en su cuna'
+            />
+            <img
+              className='game__container--way__item'
+              src={wayImg}
+              alt='Camino'
+              title='Camino'
+            />
+          </div>
+          <div className='game__container--way'>
+            <img
+              className={`game__container--way__position${props.stateVariable[0]} ${positionFour}`}
+              src={groguImg}
+              alt='Grogu en su cuna'
+              title='Grogu en su cuna'
+            />
+            <img
+              className='game__container--way__item'
+              src={wayImg}
+              alt='Camino'
+              title='Camino'
+            />
+          </div>
+          <div className='game__container--way'>
+            <img
+              className={`game__container--way__position${props.stateVariable[0]} ${positionFive}`}
+              src={groguImg}
+              alt='Grogu en su cuna'
+              title='Grogu en su cuna'
+            />
+            <img
+              className='game__container--way__item'
+              src={wayImg}
+              alt='Camino'
+              title='Camino'
+            />
+          </div>{' '}
+          <div className='game__container--cupboard'>
+            <img
+              className={`game__container--way__position${props.stateVariable[0]} ${positionSix}`}
+              src={groguImg}
+              alt='Grogu en su cuna'
+              title='Grogu en su cuna'
+            />
+            Armario
+            <div className='game__container--cupboard__cookies'>Galletas</div>
+            <div className='game__container--cupboard__frogs'>Ranas</div>
+            <div className='game__container--cupboard__eggs'>Huevos</div>
+          </div>
+        </section>
       </>
     );
   }
   const groguAdvances = () => {
     if (props.stateVariable[0] === 6) {
       setLost('');
-      console.log('perdisión');
+      setPositionFive('hidden');
+      setPositionSix('');
     } else {
       setLost('hidden');
       let aux = props.stateVariable[0];
@@ -227,33 +243,30 @@ const Game = (props) => {
 
   return (
     <>
-      <NavLink to='/'>
-        <input type='button' value='Menú' />
-      </NavLink>
-      <div className='game' onLoad={props.startGame}>
+      <section className='game' onLoad={props.startGame}>
+        <article className='game__menu'>
+          <NavLink to='/'>
+            <input type='button' value='Menú' />
+          </NavLink>
+        </article>
         <input
+          className='game__dice'
           type='button'
           value=' dado'
           id={props.diceValue}
           onClick={randomValue}
         />
-        <p>
+        <p className='game__dice--number'>
           {props.diceValue === ''
             ? ''
             : 'El resultado del dado es: ' + props.diceValue}
         </p>
-        <section className='game__container'>
-          <>{way()}</>
-          <div className='game__container--cupboard'>
-            Armario
-            <div className='game__container--cupboard__cookies'>Galletas</div>
-            <div className='game__container--cupboard__frogs'>Ranas</div>
-            <div className='game__container--cupboard__eggs'>Huevos</div>
-          </div>
-        </section>
+
+        <>{way()}</>
+
         <Win win={win} />
         <Lost lost={lost} />
-      </div>
+      </section>
       <Footer />
     </>
   );

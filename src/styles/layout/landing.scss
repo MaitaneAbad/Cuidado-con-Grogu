@@ -1,8 +1,10 @@
-.container {
+.body {
   background-image: url(../../images/LandingMandalorian.jpg);
   min-height: 100vh;
   background-size: cover;
   background-position: top;
+}
+.container {
   &__links {
     margin-top: 20px;
     display: flex;
