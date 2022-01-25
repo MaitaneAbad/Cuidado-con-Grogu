@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import groguImg from '../images/grogu.png';
 import wayImg from '../images/way.png';
 import cookieImg from '../images/cookie.png';
+import eggImg from '../images/egg.png';
 import Footer from './Footer';
 import Win from './Win';
 import Lost from './Lost';
@@ -150,38 +151,55 @@ const Game = (props) => {
             alt='Grogu en su cuna'
             title='Grogu en su cuna'
           />
-          <div className='game__container--cupboard__cookies'>
-            <p className='game__container--cupboard__cookies--title'>
-              Galletas
-            </p>
-            <div className='game__container--cupboard__cookies--containerImgs'>
+          <div className='game__container--cupboard__food'>
+            <div className='game__container--cupboard__food--containerImgs'>
               <img
-                className='game__container--cupboard__cookies--containerImgs__imgTop'
+                className='game__container--cupboard__food--containerImgs__imgTop'
                 src={cookieImg}
                 alt='Galleta'
                 title='galleta'
               />
               <img
-                className='game__container--cupboard__cookies--containerImgs__imgBottomLeft'
+                className='game__container--cupboard__food--containerImgs__imgBottomLeft'
                 src={cookieImg}
                 alt='Galleta'
                 title='galleta'
               />
               <img
-                className='game__container--cupboard__cookies--containerImgs__imgBottomRight'
+                className='game__container--cupboard__food--containerImgs__imgBottomRight'
                 src={cookieImg}
                 alt='Galleta'
                 title='galleta'
               />
             </div>
           </div>
-          <div className='game__container--cupboard__frogs'>Ranas</div>
-          <div className='game__container--cupboard__eggs'>
-            <p>Huevos</p>
-            <div>
-              {/* <img src={cookieImg} alt='Galleta' title='galleta' />
-              <img src={cookieImg} alt='Galleta' title='galleta' />
-              <img src={cookieImg} alt='Galleta' title='galleta' /> */}
+          <div className='game__container--cupboard__food'>
+            <div className='game__container--cupboard__food--containerImgs'>
+              {/* <img className='game__container--cupboard__frogs--containerImgs__imgTop' src={frogmg} alt='Huevo' title='Huevo' />
+              <img className='game__container--cupboard__frogs--containerImgs__imgTop' src={frogImg} alt='Huevo' title='Huevo' />
+              <img className='game__container--cupboard__frogs--containerImgs__imgTop' src={frogImg} alt='Huevo' title='Huevo' /> */}
+            </div>
+          </div>
+          <div className='game__container--cupboard__food'>
+            <div className='game__container--cupboard__food--containerImgs'>
+              <img
+                className='game__container--cupboard__food--containerImgs__imgTop'
+                src={eggImg}
+                alt='Huevo'
+                title='Huevo'
+              />
+              <img
+                className='game__container--cupboard__food--containerImgs__imgBottomLeft'
+                src={eggImg}
+                alt='Huevo'
+                title='Huevo'
+              />
+              <img
+                className='game__container--cupboard__food--containerImgs__imgBottomRight'
+                src={eggImg}
+                alt='Huevo'
+                title='Huevo'
+              />
             </div>
           </div>
         </div>
