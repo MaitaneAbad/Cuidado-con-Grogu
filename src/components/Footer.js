@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import '../styles/layout/footer.scss';
 const Footer = () => {
   return (
@@ -6,7 +5,6 @@ const Footer = () => {
       <footer className='footer'>
         <p>&copy; Maitane Abad Conde</p>
       </footer>
-      ;
     </>
   );
 };

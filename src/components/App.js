@@ -40,7 +40,6 @@ const App = () => {
             />
           }
         />
-
         <Route path='/rules' element={<Rules />} />
       </Routes>
     </div>
