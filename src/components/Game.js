@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import React, { useState } from 'react';
 import groguImg from '../images/grogu.png';
 import wayImg from '../images/way.png';
+import cookieImg from '../images/cookie.png';
 import Footer from './Footer';
 import Win from './Win';
 import Lost from './Lost';
@@ -141,19 +142,49 @@ const Game = (props) => {
               title='Camino'
             />
           </div>{' '}
-          <div className='game__container--cupboard'>
-            <img
-              className={`game__container--way__position${props.stateVariable[0]} ${positionSix}`}
-              src={groguImg}
-              alt='Grogu en su cuna'
-              title='Grogu en su cuna'
-            />
-            Armario
-            <div className='game__container--cupboard__cookies'>Galletas</div>
-            <div className='game__container--cupboard__frogs'>Ranas</div>
-            <div className='game__container--cupboard__eggs'>Huevos</div>
+        </section>{' '}
+        <div className='game__container--cupboard'>
+          <img
+            className={`game__container--way__position${props.stateVariable[0]} ${positionSix}`}
+            src={groguImg}
+            alt='Grogu en su cuna'
+            title='Grogu en su cuna'
+          />
+          <div className='game__container--cupboard__cookies'>
+            <p className='game__container--cupboard__cookies--title'>
+              Galletas
+            </p>
+            <div className='game__container--cupboard__cookies--containerImgs'>
+              <img
+                className='game__container--cupboard__cookies--containerImgs__imgTop'
+                src={cookieImg}
+                alt='Galleta'
+                title='galleta'
+              />
+              <img
+                className='game__container--cupboard__cookies--containerImgs__imgBottomLeft'
+                src={cookieImg}
+                alt='Galleta'
+                title='galleta'
+              />
+              <img
+                className='game__container--cupboard__cookies--containerImgs__imgBottomRight'
+                src={cookieImg}
+                alt='Galleta'
+                title='galleta'
+              />
+            </div>
           </div>
-        </section>
+          <div className='game__container--cupboard__frogs'>Ranas</div>
+          <div className='game__container--cupboard__eggs'>
+            <p>Huevos</p>
+            <div>
+              {/* <img src={cookieImg} alt='Galleta' title='galleta' />
+              <img src={cookieImg} alt='Galleta' title='galleta' />
+              <img src={cookieImg} alt='Galleta' title='galleta' /> */}
+            </div>
+          </div>
+        </div>
       </>
     );
   }
