@@ -117,7 +117,8 @@
 .transitionHidden {
   -webkit-animation: tracking-out-contract 0.5s
     cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: tracking-out-contract 0s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: tracking-out-contract 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
 }
 .transitionGrogu {
   -webkit-animation: tracking-in-expand 1.5s

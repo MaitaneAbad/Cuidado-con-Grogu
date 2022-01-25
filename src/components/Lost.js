@@ -3,8 +3,10 @@ import { NavLink } from 'react-router-dom';
 const Lost = (props) => {
   return (
     <div className={`containerLost ${props.lost}`}>
-      <NavLink to='/'>volver al menú principal</NavLink>
-      <div>Hemos Perdido</div>
+      <p className='containerLost__title'>Ohhh, ¡Grogu se ha comido todo!</p>
+      <div className='containerLost__menu'>
+        <NavLink to='/'>volver al menú principal</NavLink>
+      </div>{' '}
     </div>
   );
 };
