@@ -244,8 +244,8 @@ const Game = (props) => {
   const groguAdvances = () => {
     if (props.stateVariable[0] === 6) {
       setLost('');
-      setPositionFive('hidden');
-      setPositionSix('');
+      setPositionFive('transitionHidden');
+      setPositionSix('transitionGrogu');
     } else {
       let aux = props.stateVariable[0];
       aux++;
@@ -257,28 +257,28 @@ const Game = (props) => {
   const groguMovementOnRoad = () => {
     switch (props.stateVariable[0]) {
       case 1:
-        setStartGrogu('hidden');
-        setPositionZero('');
+        setStartGrogu('transitionHidden');
+        setPositionZero('transitionGrogu');
         break;
       case 2:
-        setPositionZero('hidden');
-        setPositionOne('');
+        setPositionZero('transitionHidden');
+        setPositionOne('transitionGrogu');
         break;
       case 3:
-        setPositionOne('hidden');
-        setPositionTwo('');
+        setPositionOne('transitionHidden');
+        setPositionTwo('transitionGrogu');
         break;
       case 4:
-        setPositionTwo('hidden');
-        setPositionThree('');
+        setPositionTwo('transitionHidden');
+        setPositionThree('transitionGrogu');
         break;
       case 5:
-        setPositionThree('hidden');
-        setPositionFour('');
+        setPositionThree('transitionHidden');
+        setPositionFour('transitionGrogu');
         break;
       case 6:
-        setPositionFour('hidden');
-        setPositionFive('');
+        setPositionFour('transitionHidden');
+        setPositionFive('transitionGrogu');
         break;
       default:
         break;
@@ -287,13 +287,13 @@ const Game = (props) => {
   const cookieCollectCupboard = () => {
     switch (props.stateVariable[1]) {
       case 2:
-        setCookieThree('hidden');
+        setCookieThree('transitionHidden');
         break;
       case 1:
-        setCookieTwo('hidden');
+        setCookieTwo('transitionHidden');
         break;
       case 0:
-        setCookieOne('hidden');
+        setCookieOne('transitionHidden');
         break;
 
       default:
@@ -303,13 +303,13 @@ const Game = (props) => {
   const frogCollectCupboard = () => {
     switch (props.stateVariable[2]) {
       case 2:
-        setFrogThree('hidden');
+        setFrogThree('transitionHidden');
         break;
       case 1:
-        setFrogTwo('hidden');
+        setFrogTwo('transitionHidden');
         break;
       case 0:
-        setFrogOne('hidden');
+        setFrogOne('transitionHidden');
         break;
 
       default:
@@ -319,13 +319,13 @@ const Game = (props) => {
   const eggCollectCupboard = () => {
     switch (props.stateVariable[3]) {
       case 2:
-        setEggThree('hidden');
+        setEggThree('transitionHidden');
         break;
       case 1:
-        setEggTwo('hidden');
+        setEggTwo('transitionHidden');
         break;
       case 0:
-        setEggOne('hidden');
+        setEggOne('transitionHidden');
         break;
 
       default:
