@@ -75,7 +75,6 @@
         animation-direction: alternate;
       }
     }
-
     &--number {
       width: 2vw;
       //  margin-left: 20px;
@@ -189,4 +188,9 @@
   -webkit-animation: tracking-in-expand 1.5s
     cubic-bezier(0.25, 0.46, 0.45, 0.94);
   animation: tracking-in-expand 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.transitionNumber {
+  -webkit-animation: number 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
+    alternate;
+  animation: number 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) alternate both;
 }

@@ -29,6 +29,7 @@ const Game = (props) => {
   const [eggThree, setEggThree] = useState('');
   const [eggTwo, setEggTwo] = useState('');
   const [eggOne, setEggOne] = useState('');
+  const [number, setNumber] = useState('');
 
   const winnerModal = () => {
     if (
@@ -41,9 +42,14 @@ const Game = (props) => {
   };
 
   const randomValue = () => {
+    props.setDiceValue('');
+    setTimeout(() => {
+      setNumber('transitionNumber');
+    }, 100);
     const math = Math.floor(Math.random() * 4 + 1);
-    props.setDiceValue(0);
     props.setDiceValue(math);
+    setNumber('');
+
     switch (math) {
       case 1:
         props.setDiceValue(1);
@@ -67,7 +73,6 @@ const Game = (props) => {
     winnerModal();
   };
   function way() {
-    console.log(props.stateVariable[0]);
     return (
       <>
         <div className='game__grogu'>
@@ -376,7 +381,7 @@ const Game = (props) => {
             id={props.diceValue}
             onClick={randomValue}
           />
-          <p className='game__dice--number'>
+          <p className={`game__dice--number ${number}`}>
             {props.diceValue === '' ? '' : props.diceValue}
           </p>
         </article>
