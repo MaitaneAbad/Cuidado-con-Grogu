@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.aa253de0.chunk.css",
-    "main.js": "./static/js/main.a90e6a84.chunk.js",
-    "main.js.map": "./static/js/main.a90e6a84.chunk.js.map",
+    "main.css": "./static/css/main.b1789a6d.chunk.css",
+    "main.js": "./static/js/main.8b8404fe.chunk.js",
+    "main.js.map": "./static/js/main.8b8404fe.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.7ad783a2.js",
     "runtime-main.js.map": "./static/js/runtime-main.7ad783a2.js.map",
     "static/js/2.e279ad13.chunk.js": "./static/js/2.e279ad13.chunk.js",
     "static/js/2.e279ad13.chunk.js.map": "./static/js/2.e279ad13.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.aa253de0.chunk.css.map": "./static/css/main.aa253de0.chunk.css.map",
+    "static/css/main.b1789a6d.chunk.css.map": "./static/css/main.b1789a6d.chunk.css.map",
     "static/js/2.e279ad13.chunk.js.LICENSE.txt": "./static/js/2.e279ad13.chunk.js.LICENSE.txt",
     "static/media/App.scss": "./static/media/LandingMandalorian.56c3aa09.jpg",
     "static/media/lost.scss": "./static/media/LostGame.9f9e036f.png",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.7ad783a2.js",
     "static/js/2.e279ad13.chunk.js",
-    "static/css/main.aa253de0.chunk.css",
-    "static/js/main.a90e6a84.chunk.js"
+    "static/css/main.b1789a6d.chunk.css",
+    "static/js/main.8b8404fe.chunk.js"
   ]
 }
