@@ -163,81 +163,81 @@ const Game = (props) => {
               title='Camino'
             />
           </div>{' '}
+          <div className='game__container--cupboard'>
+            <img
+              className={`game__container--way__position${props.stateVariable[0]} ${positionSix}`}
+              src={groguImg}
+              alt='Grogu en su cuna'
+              title='Grogu en su cuna'
+            />
+            <div className='game__container--cupboard__food'>
+              <div className='game__container--cupboard__food--containerImgs'>
+                <img
+                  className={`game__container--cupboard__food--containerImgs__imgTop ${cookieThree}`}
+                  src={cookieImg}
+                  alt='Galleta'
+                  title='galleta'
+                />
+                <img
+                  className={`game__container--cupboard__food--containerImgs__imgBottomLeft ${cookieTwo}`}
+                  src={cookieImg}
+                  alt='Galleta'
+                  title='galleta'
+                />
+                <img
+                  className={`game__container--cupboard__food--containerImgs__imgBottomRight ${cookieOne}`}
+                  src={cookieImg}
+                  alt='Galleta'
+                  title='galleta'
+                />
+              </div>
+            </div>
+            <div className='game__container--cupboard__food'>
+              <div className='game__container--cupboard__food--containerImgs'>
+                <img
+                  className={`game__container--cupboard__food--containerImgs__imgTop ${frogThree}`}
+                  src={frogImg}
+                  alt='Rana'
+                  title='Rana'
+                />
+                <img
+                  className={`game__container--cupboard__food--containerImgs__imgBottomLeft ${frogTwo}`}
+                  src={frogImg}
+                  alt='Rana'
+                  title='Rana'
+                />
+                <img
+                  className={`game__container--cupboard__food--containerImgs__imgBottomRight ${frogOne}`}
+                  src={frogImg}
+                  alt='Rana'
+                  title='Rana'
+                />
+              </div>
+            </div>
+            <div className='game__container--cupboard__food'>
+              <div className='game__container--cupboard__food--containerImgs'>
+                <img
+                  className={`game__container--cupboard__food--containerImgs__imgTop ${eggThree}`}
+                  src={eggImg}
+                  alt='Huevo'
+                  title='Huevo'
+                />
+                <img
+                  className={`game__container--cupboard__food--containerImgs__imgBottomLeft ${eggTwo} `}
+                  src={eggImg}
+                  alt='Huevo'
+                  title='Huevo'
+                />
+                <img
+                  className={`game__container--cupboard__food--containerImgs__imgBottomRight ${eggOne}`}
+                  src={eggImg}
+                  alt='Huevo'
+                  title='Huevo'
+                />
+              </div>
+            </div>
+          </div>
         </section>{' '}
-        <div className='game__container--cupboard'>
-          <img
-            className={`game__container--way__position${props.stateVariable[0]} ${positionSix}`}
-            src={groguImg}
-            alt='Grogu en su cuna'
-            title='Grogu en su cuna'
-          />
-          <div className='game__container--cupboard__food'>
-            <div className='game__container--cupboard__food--containerImgs'>
-              <img
-                className={`game__container--cupboard__food--containerImgs__imgTop ${cookieThree}`}
-                src={cookieImg}
-                alt='Galleta'
-                title='galleta'
-              />
-              <img
-                className={`game__container--cupboard__food--containerImgs__imgBottomLeft ${cookieTwo}`}
-                src={cookieImg}
-                alt='Galleta'
-                title='galleta'
-              />
-              <img
-                className={`game__container--cupboard__food--containerImgs__imgBottomRight ${cookieOne}`}
-                src={cookieImg}
-                alt='Galleta'
-                title='galleta'
-              />
-            </div>
-          </div>
-          <div className='game__container--cupboard__food'>
-            <div className='game__container--cupboard__food--containerImgs'>
-              <img
-                className={`game__container--cupboard__food--containerImgs__imgTop ${frogThree}`}
-                src={frogImg}
-                alt='Rana'
-                title='Rana'
-              />
-              <img
-                className={`game__container--cupboard__food--containerImgs__imgBottomLeft ${frogTwo}`}
-                src={frogImg}
-                alt='Rana'
-                title='Rana'
-              />
-              <img
-                className={`game__container--cupboard__food--containerImgs__imgBottomRight ${frogOne}`}
-                src={frogImg}
-                alt='Rana'
-                title='Rana'
-              />
-            </div>
-          </div>
-          <div className='game__container--cupboard__food'>
-            <div className='game__container--cupboard__food--containerImgs'>
-              <img
-                className={`game__container--cupboard__food--containerImgs__imgTop ${eggThree}`}
-                src={eggImg}
-                alt='Huevo'
-                title='Huevo'
-              />
-              <img
-                className={`game__container--cupboard__food--containerImgs__imgBottomLeft ${eggTwo} `}
-                src={eggImg}
-                alt='Huevo'
-                title='Huevo'
-              />
-              <img
-                className={`game__container--cupboard__food--containerImgs__imgBottomRight ${eggOne}`}
-                src={eggImg}
-                alt='Huevo'
-                title='Huevo'
-              />
-            </div>
-          </div>
-        </div>
       </>
     );
   }
@@ -376,9 +376,7 @@ const Game = (props) => {
           onClick={randomValue}
         />
         <p className='game__dice--number'>
-          {props.diceValue === ''
-            ? ''
-            : 'El resultado del dado es: ' + props.diceValue}
+          {props.diceValue === '' ? '' : props.diceValue}
         </p>
         <>{way()}</>
         <Win win={win} />

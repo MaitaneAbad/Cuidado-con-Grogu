@@ -17,8 +17,10 @@
     left: 100px;
     &--number {
       position: absolute;
-      top: 23.5px;
+      top: 22.5px;
       left: 185px;
+      font-size: 22px;
+      font-weight: 500;
     }
   }
   &__grogu {
@@ -35,7 +37,7 @@
   }
   &__container {
     display: flex;
-    align-items: end;
+    align-items: center;
     &--way {
       display: flex;
       justify-content: end;
@@ -72,10 +74,14 @@
     &--cupboard {
       height: 10%;
       width: 60%;
-      margin: 5px;
+      margin: 5px 15px 0px;
+      padding-left: 20px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: space-around;
+      position: relative;
+      top: 35px;
       &__food {
         &--containerImgs {
           margin: 15px auto;
