@@ -67,17 +67,18 @@
       @include hideTapHighlightColor();
       @include hardwareAccel();
       @include improveAntiAlias();
+      animation-name: pulse-grow;
+      animation-duration: 0.3s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
       &:hover {
-        animation-name: pulse-grow;
-        animation-duration: 0.3s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
+        animation: none;
       }
     }
     &--number {
       width: 2vw;
-      //  margin-left: 20px;
+      margin-left: 20px;
       font-size: 22px;
       font-weight: 500;
     }
