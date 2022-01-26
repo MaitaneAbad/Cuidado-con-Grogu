@@ -1,9 +1,4 @@
-.body {
-  background-image: url(../../images/LandingMandalorian.jpg);
-  min-height: 100vh;
-  background-size: cover;
-  background-position: top;
-}
+@import '../core/variables.scss';
 .container {
   &__links {
     margin-top: 20px;
@@ -12,5 +7,20 @@
     align-items: center;
     flex-direction: column;
     min-height: 50vh;
+
+    &--button {
+      padding: 6px;
+      font-size: 20px;
+      font-weight: 400;
+      border-radius: 15px;
+      transition-duration: 0.3;
+      transition-property: transform;
+      @include hideTapHighlightColor();
+      @include hardwareAccel();
+      @include improveAntiAlias();
+      &:hover {
+        transform: scale(1.1) rotate(4deg);
+      }
+    }
   }
 }

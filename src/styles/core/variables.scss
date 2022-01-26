@@ -48,3 +48,20 @@
     opacity: 1;
   }
 }
+
+@keyframes pulse-grow {
+  to {
+    transform: scale(1.1);
+  }
+}
+@mixin hideTapHighlightColor() {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@mixin hardwareAccel() {
+  transform: translateZ(0);
+}
+
+@mixin improveAntiAlias() {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}

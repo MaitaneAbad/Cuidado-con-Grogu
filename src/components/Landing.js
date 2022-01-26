@@ -5,13 +5,22 @@ const Landing = (props) => {
     <div className='container'>
       <div className='container__links'>
         <NavLink to='rules'>
-          <input type='button' value='Reglas juego' />
+          <input
+            className='container__links--button'
+            type='button'
+            value='Reglas juego'
+          />
         </NavLink>
         <NavLink to='pieces'>
-          <input type='button' value='Piezas juego' />
+          <input
+            className='container__links--button'
+            type='button'
+            value='Piezas juego'
+          />
         </NavLink>
         <NavLink to='game'>
           <input
+            className='container__links--button'
             type='button'
             value='Comenzar juego'
             onClick={props.startGame}

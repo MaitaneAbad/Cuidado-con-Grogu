@@ -193,7 +193,7 @@ const Game = (props) => {
               </div>
             </div>
             <div className='game__container--cupboard__food'>
-              <div className='game__container--cupboard__food--containerImgs'>
+              <div className='game__container--cupboard__food--containerImgs middle'>
                 <img
                   className={`game__container--cupboard__food--containerImgs__imgTop ${frogThree}`}
                   src={frogImg}
@@ -365,19 +365,21 @@ const Game = (props) => {
       <section className='game' onLoad={props.startGame}>
         <article className='game__menu'>
           <NavLink to='/'>
-            <input type='button' value='Menú' />
+            <input className='game__menu--button' type='button' value='Menú' />
           </NavLink>
         </article>
-        <input
-          className='game__dice'
-          type='button'
-          value=' dado'
-          id={props.diceValue}
-          onClick={randomValue}
-        />
-        <p className='game__dice--number'>
-          {props.diceValue === '' ? '' : props.diceValue}
-        </p>
+        <article className='game__dice'>
+          <input
+            className='game__dice--button'
+            type='button'
+            value=' dado'
+            id={props.diceValue}
+            onClick={randomValue}
+          />
+          <p className='game__dice--number'>
+            {props.diceValue === '' ? '' : props.diceValue}
+          </p>
+        </article>
         <>{way()}</>
         <Win win={win} />
         <Lost lost={lost} />
