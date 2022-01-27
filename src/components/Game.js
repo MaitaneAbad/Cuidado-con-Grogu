@@ -31,6 +31,7 @@ const Game = (props) => {
   const [eggOne, setEggOne] = useState('');
   const [number, setNumber] = useState('');
 
+  //Comprobación de si ya tenemos el armario a 0
   const winnerModal = () => {
     if (
       props.stateVariable[1] === 0 &&
@@ -41,11 +42,15 @@ const Game = (props) => {
     }
   };
 
+  //Crear un número aleatorio cada vez que le damos al dado, ese número es entero y su valor está entre 1-4.
+  //Después comporbamos qué número ha salido, entramos en el caso del switch y realizamos la función correspondiente
   const randomValue = () => {
     props.setDiceValue('');
+
     setTimeout(() => {
       setNumber('transitionNumber');
     }, 100);
+
     const math = Math.floor(Math.random() * 4 + 1);
     props.setDiceValue(math);
     setNumber('');
@@ -72,6 +77,10 @@ const Game = (props) => {
     }
     winnerModal();
   };
+
+  //función para renderizar la página dependiendo del valor sacado en el dado,
+  // y hacer que se vaya moviendo grogu o ir sacando comida del armario
+  //Para ello, hacemos que las clases vayan cambiando en función del valor obtenido
   function way() {
     return (
       <>
@@ -167,7 +176,7 @@ const Game = (props) => {
               alt='Camino'
               title='Camino'
             />
-          </div>{' '}
+          </div>
           <div className='game__container--cupboard'>
             <img
               className={`game__container--way__position${props.stateVariable[0]} ${positionSix}`}
@@ -242,10 +251,12 @@ const Game = (props) => {
               </div>
             </div>
           </div>
-        </section>{' '}
+        </section>
       </>
     );
   }
+
+  //Función para que vaya avanzando grogu a la casilla del armario
   const groguAdvances = () => {
     if (props.stateVariable[0] === 6) {
       setLost('');
@@ -259,6 +270,7 @@ const Game = (props) => {
       groguMovementOnRoad();
     }
   };
+
   const groguMovementOnRoad = () => {
     switch (props.stateVariable[0]) {
       case 1:
@@ -289,6 +301,18 @@ const Game = (props) => {
         break;
     }
   };
+
+  //Función de coger una cookie
+  const collectCookie = () => {
+    if (props.stateVariable[1] !== 0) {
+      let aux = props.stateVariable[1];
+      aux--;
+      props.stateVariable[1] = aux;
+      cookieCollectCupboard();
+    }
+    console.log(props.stateVariable);
+  };
+
   const cookieCollectCupboard = () => {
     switch (props.stateVariable[1]) {
       case 2:
@@ -305,6 +329,18 @@ const Game = (props) => {
         break;
     }
   };
+
+  //Función de coger una rana
+  const collectFrog = () => {
+    if (props.stateVariable[2] !== 0) {
+      let aux = props.stateVariable[2];
+      aux--;
+      props.stateVariable[2] = aux;
+      frogCollectCupboard();
+    }
+    console.log(props.stateVariable);
+  };
+
   const frogCollectCupboard = () => {
     switch (props.stateVariable[2]) {
       case 2:
@@ -321,6 +357,18 @@ const Game = (props) => {
         break;
     }
   };
+
+  //Función de coger un huevo
+  const collectEgg = () => {
+    if (props.stateVariable[3] !== 0) {
+      let aux = props.stateVariable[3];
+      aux--;
+      props.stateVariable[3] = aux;
+      eggCollectCupboard();
+    }
+    console.log(props.stateVariable);
+  };
+
   const eggCollectCupboard = () => {
     switch (props.stateVariable[3]) {
       case 2:
@@ -337,37 +385,10 @@ const Game = (props) => {
         break;
     }
   };
-  const collectCookie = () => {
-    if (props.stateVariable[1] !== 0) {
-      let aux = props.stateVariable[1];
-      aux--;
-      props.stateVariable[1] = aux;
-      cookieCollectCupboard();
-    }
-    console.log(props.stateVariable);
-  };
-  const collectFrog = () => {
-    if (props.stateVariable[2] !== 0) {
-      let aux = props.stateVariable[2];
-      aux--;
-      props.stateVariable[2] = aux;
-      frogCollectCupboard();
-    }
-    console.log(props.stateVariable);
-  };
-  const collectEgg = () => {
-    if (props.stateVariable[3] !== 0) {
-      let aux = props.stateVariable[3];
-      aux--;
-      props.stateVariable[3] = aux;
-      eggCollectCupboard();
-    }
-    console.log(props.stateVariable);
-  };
 
   return (
     <>
-      <section className='game' onLoad={props.startGame}>
+      <main className='game' onLoad={props.startGame}>
         <Menu />
         <article className='game__dice'>
           <input
@@ -385,7 +406,7 @@ const Game = (props) => {
         <Win win={win} />
         <Lost lost={lost} />
         <Footer />
-      </section>
+      </main>
     </>
   );
 };
