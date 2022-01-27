@@ -39,6 +39,7 @@ const Game = (props) => {
       props.stateVariable[2] === 0 &&
       props.stateVariable[3] === 0
     ) {
+      setText('¡BIEN, Grogu no llegó a la mercancía!');
       setWin('');
     }
   };
