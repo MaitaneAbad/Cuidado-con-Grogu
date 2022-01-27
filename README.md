@@ -20,19 +20,19 @@ _¿Que necesitas para instalar el software?_
 - Abre una terminal en la carpeta raíz de tu repositorio
 - Instala las dependencias locales ejecutando en la terminal el comando:
 
-         npm install
+  npm install
 
 ##### Instalando React-router-dom 🔧
 
 _Una vez instalado las dependecias generales, tienes que intalar React-router-dom para que puedas visualizar la web correctamente. Para ello, ejecuta_
 
-        npm install react-router-dom
+    npm install react-router-dom
 
 #### Arrancar el proyecto ⚙️
 
 _Una vez hecho el paso anterior, hay que arrancar el proyecto cada vez que programes. Para ello, ejecuta el comando:_
 
-      npm start
+    npm start
 
 A continuación puedes observar que:
 
@@ -43,7 +43,7 @@ A continuación puedes observar que:
 
 _Introducir el comando_
 
-     npm run githubpages
+    npm run githubpages
 
 Y a continuación:
 
