@@ -70,16 +70,19 @@ const Pieces = () => {
           </li>
           <li className='piecesContainer__list--item'>
             <p className='piecesContainer__list--item__title'>Un armario </p>
+            <p>Donde se guardará la comida y no tendrá que llegar Grogu</p>
           </li>
           <li className='piecesContainer__list--item'>
             <p className='piecesContainer__list--item__title'>
               Tres compartimentos en el armario
             </p>
+            <p>Que contendran las galletas , ranas y huevos</p>
           </li>
           <li className='piecesContainer__list--item'>
             <p className='piecesContainer__list--item__title'>
-              Un dado en forma de botón,con valores entre 1 y 4.
+              Un dado en forma de botón
             </p>
+            <p>Que retornará valores entre 1 y 4</p>
           </li>
         </ul>
         <Footer />
