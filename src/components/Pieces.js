@@ -11,9 +11,9 @@ const Pieces = () => {
     <>
       <section className='piecesContainer'>
         <Menu />
-        <p className='piecesContainer__title'>
+        <h2 className='piecesContainer__title'>
           Tipo de piezas que verás en el juego:
-        </p>
+        </h2>
         <ul className='piecesContainer__list'>
           <li className='piecesContainer__list--item'>
             <p className='piecesContainer__list--item__title'>Grogu</p>
@@ -48,7 +48,7 @@ const Pieces = () => {
           </li>
           <li className='piecesContainer__list--item'>
             <p className='piecesContainer__list--item__title'>
-              Tres huevos de Frog Lady{' '}
+              Tres huevos de Frog Lady
             </p>
             <img
               className='piecesContainer__list--item__img'
