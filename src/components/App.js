@@ -1,6 +1,4 @@
 import '../styles/App.scss';
-
-// Fichero src/components/App.js
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Landing from './Landing';

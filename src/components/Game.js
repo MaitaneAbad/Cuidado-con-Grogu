@@ -30,6 +30,7 @@ const Game = (props) => {
   const [eggTwo, setEggTwo] = useState('');
   const [eggOne, setEggOne] = useState('');
   const [number, setNumber] = useState('');
+  const [text, setText] = useState('');
 
   //Comprobación de si ya tenemos el armario a 0
   const winnerModal = () => {
@@ -46,7 +47,6 @@ const Game = (props) => {
   //Después comporbamos qué número ha salido, entramos en el caso del switch y realizamos la función correspondiente
   const randomValue = () => {
     props.setDiceValue('');
-
     setTimeout(() => {
       setNumber('transitionNumber');
     }, 100);
@@ -77,7 +77,15 @@ const Game = (props) => {
     }
     winnerModal();
   };
-
+  // const textModal = () => {
+  //   console.log(props.stateVariable);
+  //   if (props.stateVariable[0] <= 1) {
+  //     let aux = props.stateVariable[0];
+  //     aux++;
+  //     props.stateVariable[0] = aux;
+  //     console.log('avanza grogu');
+  //   }
+  // };
   //función para renderizar la página dependiendo del valor sacado en el dado,
   // y hacer que se vaya moviendo grogu o ir sacando comida del armario
   //Para ello, hacemos que las clases vayan cambiando en función del valor obtenido
@@ -92,6 +100,7 @@ const Game = (props) => {
             title='Grogu en su cuna'
           />
         </div>
+        <article className='game__containerText'>{text}</article>
         <section className='game__container'>
           <div className='game__container--way'>
             <img
@@ -262,11 +271,11 @@ const Game = (props) => {
       setLost('');
       setPositionFive('transitionHidden');
       setPositionSix('transitionGrogu');
+      setText('¡Grogu llenó su barriguita de comida!');
     } else {
       let aux = props.stateVariable[0];
       aux++;
       props.stateVariable[0] = aux;
-      console.log((props.stateVariable[0] = aux));
       groguMovementOnRoad();
     }
   };
@@ -276,26 +285,33 @@ const Game = (props) => {
       case 1:
         setStartGrogu('transitionHidden');
         setPositionZero('transitionGrogu');
+        setText('Grogu se acerca...');
+
         break;
       case 2:
         setPositionZero('transitionHidden');
         setPositionOne('transitionGrogu');
+        setText('- ¡No Grogu, no son para ti!');
         break;
       case 3:
         setPositionOne('transitionHidden');
         setPositionTwo('transitionGrogu');
+        setText('Parece que quiere coger los huevos o una rana, quién sabe...');
         break;
       case 4:
         setPositionTwo('transitionHidden');
         setPositionThree('transitionGrogu');
+        setText('Ohhh no!!! sigue avanzando Grogu...');
         break;
       case 5:
         setPositionThree('transitionHidden');
         setPositionFour('transitionGrogu');
+        setText('- ¡Ni se te ocurra coger nada del armario!');
         break;
       case 6:
         setPositionFour('transitionHidden');
         setPositionFive('transitionGrogu');
+        setText('¡Ohh Noo, está demasiado cerca de la mercancia!');
         break;
       default:
         break;
@@ -309,23 +325,30 @@ const Game = (props) => {
       aux--;
       props.stateVariable[1] = aux;
       cookieCollectCupboard();
+    } else if (props.stateVariable[1] === 0) {
+      setText('');
     }
-    console.log(props.stateVariable);
   };
 
   const cookieCollectCupboard = () => {
     switch (props.stateVariable[1]) {
       case 2:
         setCookieThree('transitionHidden');
+        setText('Vamos a descargar las galletas...');
         break;
       case 1:
         setCookieTwo('transitionHidden');
+        setText('Una galleta más...');
         break;
       case 0:
         setCookieOne('transitionHidden');
+        setText(
+          '¡Bien, y con esto terminamos con la descarga de las galletas!'
+        );
         break;
 
       default:
+        setText('');
         break;
     }
   };
@@ -337,23 +360,29 @@ const Game = (props) => {
       aux--;
       props.stateVariable[2] = aux;
       frogCollectCupboard();
+      console.log((props.stateVariable[2] = aux));
+    } else if (props.stateVariable[2] === 0) {
+      setText('');
     }
-    console.log(props.stateVariable);
   };
 
   const frogCollectCupboard = () => {
     switch (props.stateVariable[2]) {
       case 2:
         setFrogThree('transitionHidden');
+        setText('¡Uy, que resbaladiza son las ranas...!');
         break;
       case 1:
         setFrogTwo('transitionHidden');
+        setText(' ¡Tu no te escapas, rana!');
         break;
       case 0:
         setFrogOne('transitionHidden');
+        setText('Y con esto terminamos con las ranas de Sorgan.');
         break;
 
       default:
+        setText('');
         break;
     }
   };
@@ -365,23 +394,28 @@ const Game = (props) => {
       aux--;
       props.stateVariable[3] = aux;
       eggCollectCupboard();
+    } else if (props.stateVariable[3] === 0) {
+      setText('');
     }
-    console.log(props.stateVariable);
   };
 
   const eggCollectCupboard = () => {
     switch (props.stateVariable[3]) {
       case 2:
         setEggThree('transitionHidden');
+        setText('- ¡No, Grogu, no son para ti estos huevos!');
         break;
       case 1:
         setEggTwo('transitionHidden');
+        setText('Con cuidado descargamos otro huevo...');
         break;
       case 0:
         setEggOne('transitionHidden');
+        setText('¡Bien, pusimos los huevos fuera del alcance de Grogu!');
         break;
 
       default:
+        setText('');
         break;
     }
   };
