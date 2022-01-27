@@ -22,7 +22,6 @@ _¿Que necesitas para instalar el software?_
 
          npm install
 
-
 ##### Instalando React-router-dom 🔧
 
 _Una vez instalado las dependecias generales, tienes que intalar React-router-dom para que puedas visualizar la web correctamente. Para ello, ejecuta_
@@ -33,8 +32,7 @@ _Una vez instalado las dependecias generales, tienes que intalar React-router-do
 
 _Una vez hecho el paso anterior, hay que arrancar el proyecto cada vez que programes. Para ello, ejecuta el comando:_
 
-        npm start
-
+      npm start
 
 A continuación puedes observar que:
 
