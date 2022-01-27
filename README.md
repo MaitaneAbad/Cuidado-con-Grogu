@@ -1,6 +1,6 @@
 <h1 align="center">Hi 👋, I'm Maitane Abad</h1>
 
-<img align="center"src='./src/images/gifGrogu.gif' />
+<p align="center"><img  src='./src/images/gifGrogu.gif' /></p>
 
 # Cuidado con Grogu
 
