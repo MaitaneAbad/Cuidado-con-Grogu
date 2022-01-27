@@ -31,6 +31,7 @@ const Game = (props) => {
   const [eggOne, setEggOne] = useState('');
   const [number, setNumber] = useState('');
   const [text, setText] = useState('');
+  const [containerShowText, setContainerShowText] = useState('hidden');
 
   //Comprobación de si ya tenemos el armario a 0
   const winnerModal = () => {
@@ -55,7 +56,7 @@ const Game = (props) => {
     const math = Math.floor(Math.random() * 4 + 1);
     props.setDiceValue(math);
     setNumber('');
-
+    setContainerShowText('');
     switch (math) {
       case 1:
         props.setDiceValue(1);
@@ -78,15 +79,7 @@ const Game = (props) => {
     }
     winnerModal();
   };
-  // const textModal = () => {
-  //   console.log(props.stateVariable);
-  //   if (props.stateVariable[0] <= 1) {
-  //     let aux = props.stateVariable[0];
-  //     aux++;
-  //     props.stateVariable[0] = aux;
-  //     console.log('avanza grogu');
-  //   }
-  // };
+
   //función para renderizar la página dependiendo del valor sacado en el dado,
   // y hacer que se vaya moviendo grogu o ir sacando comida del armario
   //Para ello, hacemos que las clases vayan cambiando en función del valor obtenido
@@ -101,7 +94,9 @@ const Game = (props) => {
             title='Grogu en su cuna'
           />
         </div>
-        <article className='game__containerText'>{text}</article>
+        <article className={`game__containerText ${containerShowText}`}>
+          {text}
+        </article>
         <section className='game__container'>
           <div className='game__container--way'>
             <img
