@@ -20,7 +20,7 @@ _¿Que necesitas para instalar el software?_
 - Abre una terminal en la carpeta raíz de tu repositorio
 - Instala las dependencias locales ejecutando en la terminal el comando:
 
-  npm install
+      npm install
 
 ##### Instalando React-router-dom 🔧
 
