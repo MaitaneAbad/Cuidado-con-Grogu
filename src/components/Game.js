@@ -1,5 +1,4 @@
 import '../styles/layout/game.scss';
-import { NavLink } from 'react-router-dom';
 import React, { useState } from 'react';
 import groguImg from '../images/grogu.png';
 import wayImg from '../images/way.png';
@@ -9,6 +8,7 @@ import frogImg from '../images/frog.png';
 import Footer from './Footer';
 import Win from './Win';
 import Lost from './Lost';
+import Menu from './Menu';
 const Game = (props) => {
   const [win, setWin] = useState('hidden');
   const [lost, setLost] = useState('hidden');
@@ -368,11 +368,7 @@ const Game = (props) => {
   return (
     <>
       <section className='game' onLoad={props.startGame}>
-        <article className='game__menu'>
-          <NavLink to='/'>
-            <input className='game__menu--button' type='button' value='Menú' />
-          </NavLink>
-        </article>
+        <Menu />
         <article className='game__dice'>
           <input
             className='game__dice--button'
