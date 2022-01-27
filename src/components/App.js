@@ -11,6 +11,8 @@ import Pieces from './Pieces';
 const App = () => {
   const [diceValue, setDiceValue] = useState('');
   const [stateVariable, setStateVariable] = useState([]);
+
+  //Función que recoge los valores iniciales de cada variable y los pusheo a un array para su manejo
   const startGame = () => {
     setDiceValue('');
     stateVariable.splice(0, 4);

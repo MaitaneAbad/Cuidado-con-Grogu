@@ -7,11 +7,11 @@
     align-items: center;
     flex-direction: column;
     min-height: 50vh;
-
+    font-weight: 700;
     &--button {
       padding: 6px;
       font-size: 20px;
-      font-weight: 400;
+      text-transform: uppercase;
       border-radius: 15px;
       transition-duration: 0.3;
       transition-property: transform;
